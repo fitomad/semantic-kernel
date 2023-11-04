@@ -1,0 +1,31 @@
+{
+    "schema": 1,
+    "type": "completion",
+    "description": "Converts source code from a programming language to another.",
+    "completion": {
+         "max_tokens": 8000,
+         "temperature": 0.1,
+         "top_p": 0.0,
+         "presence_penalty": 0.0,
+         "frequency_penalty": 0.0
+    },
+    "input": {
+         "parameters": [
+              {
+                   "name": "input_language",
+                   "description": "The programming language used in the code that I want to migrate.",
+                   "defaultValue": ""
+              },
+              {
+                   "name": "output_language",
+                   "description": "Rewrite the code using this programming language.",
+                   "defaultValue": ""
+              },
+              {
+                   "name": "code",
+                   "description": "The code that I want to migrate from one language to another.",
+                   "defaultValue": ""
+              }
+         ]
+    }
+}

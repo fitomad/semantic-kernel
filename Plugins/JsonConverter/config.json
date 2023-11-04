@@ -1,0 +1,26 @@
+{
+    "schema": 1,
+    "type": "completion",
+    "description": "Create a data structure from a JSON document.",
+    "completion": {
+         "max_tokens": 8000,
+         "temperature": 0.1,
+         "top_p": 0.0,
+         "presence_penalty": 0.0,
+         "frequency_penalty": 0.0
+    },
+    "input": {
+         "parameters": [
+              {
+                   "name": "language",
+                   "description": "The programming language in which the data model will be generated based on the JSON document",
+                   "defaultValue": "Swift"
+              },
+              {
+                   "name": "content",
+                   "description": "The JSON document that is going to be converted",
+                   "defaultValue": ""
+              }
+         ]
+    }
+}

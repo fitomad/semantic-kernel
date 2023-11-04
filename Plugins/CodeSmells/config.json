@@ -1,0 +1,26 @@
+{
+    "schema": 1,
+    "type": "completion",
+    "description": "Checks for development code smells and bad practices.",
+    "completion": {
+         "max_tokens": 8000,
+         "temperature": 0.1,
+         "top_p": 0.0,
+         "presence_penalty": 0.0,
+         "frequency_penalty": 0.0
+    },
+    "input": {
+         "parameters": [
+              {
+                   "name": "language",
+                   "description": "The programming language in which the source code is written.",
+                   "defaultValue": ""
+              },
+              {
+                   "name": "code",
+                   "description": "The code that must be checked looking for code smells.",
+                   "defaultValue": ""
+              }
+         ]
+    }
+}

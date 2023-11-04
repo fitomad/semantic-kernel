@@ -1,0 +1,5 @@
+Act as a senior software developer. You must migrate this {{$input_language}} code to {{$output_language}} code.
+
+--- Begin ---
+{{$code}}
+--- End ---

@@ -1,0 +1,5 @@
+Act as a senior {{$language}} developer. Convert this JSON structure in a {{$language}} data model.
+
+--- Begin ---
+{{$content}}
+--- End ---
