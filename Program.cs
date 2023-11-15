@@ -1,10 +1,6 @@
-﻿using System.IO;
-using Microsoft.SemanticKernel;
-using Microsoft.SemanticKernel.Skills.Core;
-using Microsoft.SemanticKernel.Planning;
-using Microsoft.SemanticKernel.Connectors.AI.HuggingFace;
-using Microsoft.SemanticKernel.Orchestration;
+﻿using Microsoft.SemanticKernel;
 using Microsoft.Extensions.Logging;
+using Microsoft.SemanticKernel.Plugins.Core;
 using Globant.Plugins;
 
 var builder = new KernelBuilder();
@@ -26,13 +22,13 @@ builder.WithLoggerFactory(loggerFactory);
 
 var kernel = builder.Build();
 
-var filePlugin = kernel.ImportSkill(new FileIOSkill(), "file");
+var filePlugin = kernel.ImportFunctions(new FileIOPlugin(), "file");
 
 // Import the semantic functions
 var pluginsDirectory = Directory.GetCurrentDirectory();
-var orquestationPlugin = kernel.ImportSemanticSkillFromDirectory(pluginsDirectory, "Plugins");
+var orquestationPlugin = kernel.ImportSemanticFunctionsFromDirectory(pluginsDirectory, "Plugins");
 // Import the native functions
-var codePlugin = kernel.ImportSkill(new Statistics(), "codeStatisticsPlugin");
+var codePlugin = kernel.ImportFunctions(new Statistics(), "codeStatisticsPlugin");
 
 // TEST
 
