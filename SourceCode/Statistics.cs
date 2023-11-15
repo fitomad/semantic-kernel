@@ -1,7 +1,5 @@
-using System.IO;
 using System.ComponentModel;
-using Microsoft.SemanticKernel.Orchestration;
-using Microsoft.SemanticKernel.SkillDefinition;
+using Microsoft.SemanticKernel;
 
 namespace Globant.Plugins;
 
