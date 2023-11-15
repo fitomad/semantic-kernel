@@ -1,6 +1,0 @@
-Act as a senior {{$language}} developer. Make a code review for the given code looking for code smells. The output must be in Markdown.
-
---- Begin ---
-{{$code}}
---- End ---
-
